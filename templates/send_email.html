@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Mailer</title>
+</head>
+<body>
+    <h2>Send Bulk Email</h2>
+
+    {% if info %}
+        <div class="msg {{ info.status }}">{{ info.text }}</div>
+    {% endif %}
+
+    <form method="POST" action="/">
+        <label for="emails">Recipients (separated by commas):</label>
+        <input type="text" id="emails" name="emails" placeholder="abc@mail.com, xyz@mail.com" required> <br><br>
+            
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
+            
+        <button type="submit">SEND EMAIL</button>
+    </form>
+</body>
+</html>

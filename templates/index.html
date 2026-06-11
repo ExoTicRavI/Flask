@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask</title>
+</head>
+<body>
+    <form method="post">
+        {{form.hidden_tag()}}
+        {{form.name.label}}
+        {{form.name(size = 10)}}
+        {{form.submit()}}
+    </form>
+</body>
+</html>
