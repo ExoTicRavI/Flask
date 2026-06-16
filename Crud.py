@@ -36,7 +36,7 @@ def edit(id):
         student.email = request.form['email']
         db.session.commit()
         return redirect(url_for("Crud"))
-    return render_template('edit.html')
+    return render_template('edit.html', student = student)
 
 
 @app.route('/delete/<int:id>')
